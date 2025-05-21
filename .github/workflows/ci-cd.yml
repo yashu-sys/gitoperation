@@ -1,0 +1,25 @@
+.github/workflows/ci-cd.yml
+name: C CI/CD
+On:
+ push:
+ branches:
+  -main
+  pull_request:
+   branches:
+ -main
+ job:
+build:
+run-on:ubuntu-latest
+
+steps:
+-name:Install GCC
+run: sudo apt-get update && sudo apt-get install -y gcc
+
+name:deploy-staging
+run-on:
+ubuntu latest environment 
+name:staging
+
+steps:
+-name:"simulate deployment"
+run:echo"simulate deloyment to staging"
